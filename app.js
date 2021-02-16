@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressSanitizer());
 app.use(methodOverride("_method"));
-// MONGOOSE/MODEL CONFIG
+
 var blogSchema = new mongoose.Schema({
   title: String,
   image: String,
@@ -24,7 +24,6 @@ var blogSchema = new mongoose.Schema({
 });
 var Blog = mongoose.model("Blog", blogSchema);
 
-// RESTFUL ROUTES
 app.get('/', (err, res) => {
   res.redirect('blogs');
 });
