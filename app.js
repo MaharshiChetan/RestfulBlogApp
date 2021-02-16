@@ -23,7 +23,7 @@ var blogSchema = new mongoose.Schema({
   body: String,
 });
 var Blog = mongoose.model("Blog", blogSchema);
-// test
+// test 1
 // RESTFUL ROUTES
 app.get('/', (err, res) => {
   res.redirect('blogs');
